@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": true,
+    "e2e": true,
+    "localhost.crt": true,
+    "localhost.key": true,
+    "package-lock.json": true,
+    ".editorconfig": true,
+    "browserslist": true,
+    "karma.conf.js": true
+  }
+}

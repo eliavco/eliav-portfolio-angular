@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
+// tslint:disable-next-line: ban-types
+declare let gtag: Function;
+declare let mgaids: Array<string>;
 
 @Component({
 	selector: 'ec-root',
@@ -6,5 +11,20 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'portfolio';
+	title = 'Portfolio';
+
+	constructor(private router: Router) {
+		this.router.events.subscribe(event => {
+			if (event instanceof NavigationEnd) {
+				mgaids.forEach(mgaid => {
+					gtag('config', mgaid,
+						{
+							page_path: event.urlAfterRedirects
+						}
+					);
+				});
+			}
+		});
+	}
+
 }

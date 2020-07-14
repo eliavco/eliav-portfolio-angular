@@ -4,16 +4,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { AnalyticsEventService } from './services/analytics-event/analytics-event.service';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarHttpModule } from '@ngx-loading-bar/http';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		HeaderComponent,
+		HomeComponent
 	],
 	imports: [
 		BrowserModule,
@@ -27,6 +32,7 @@ import { AppComponent } from './app.component';
 		AppRoutingModule
 	],
 	providers: [
+		AnalyticsEventService,
 		Title
 	],
 	bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+	baseTitle: 'Portfolio',
+	production: true
 };
