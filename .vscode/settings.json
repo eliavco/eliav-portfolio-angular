@@ -8,6 +8,14 @@
     "package-lock.json": true,
     ".editorconfig": true,
     "browserslist": true,
-    "karma.conf.js": true
+    "karma.conf.js": true,
+    ".firebase": true,
+    ".firebaserc": true,
+    "firebase.json": true,
+    "tslint.json": true,
+    "tsconfig.spec.json": true,
+    "tsconfig.app.json": true,
+    "tsconfig.json": true,
+    "dist": true
   }
 }
