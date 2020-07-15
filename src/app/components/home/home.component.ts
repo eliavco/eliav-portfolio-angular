@@ -8,11 +8,10 @@ import { environment } from './../../../environments/environment';
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
 	constructor(private titleService: Title) { }
 
 	ngOnInit(): void {
-		// this.titleService.setTitle(`${environment.baseTitle} - blabla`);
+		this.titleService.setTitle(`Eliav Cohen - ${environment.baseTitle}`);
 	}
 
 }

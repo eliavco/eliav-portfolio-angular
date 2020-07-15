@@ -13,12 +13,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { HomeBannerComponent } from './components/home-banner/home-banner.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HeaderComponent,
-		HomeComponent
+		HomeComponent,
+		HomeBannerComponent,
+		TabsComponent,
+		WelcomeComponent,
+		FeaturesComponent,
+		FooterComponent,
+		GalleryComponent
 	],
 	imports: [
 		BrowserModule,
