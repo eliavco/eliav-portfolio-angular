@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
 	selector: 'ec-footer',
@@ -7,33 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 	alert;
+	// @ViewChild('formNews') form;
+	// @ViewChild('buttonNews') button;
+	// @ViewChild('emailNews') email;
 
-	constructor() { }
+	constructor(private http: HttpClient) { }
 
 	ngOnInit(): void {
-		const form = $('#mc-embedded-subscribe-form'); // contact form
-		const submit = $('.sub-btn'); // submit button
+		// const form = $('#mc-embedded-subscribe-form'); // contact form
 
-		form.on('submit', (e) => {
-			e.preventDefault(); // prevent default form submit
-
-			$.ajax({
-				url: 'mail.php', // form action url
-				type: 'POST', // form submit method get/post
-				dataType: 'html', // request type html/json/xml
-				data: form.serialize(), // serialize form data
-				beforeSend: () => {
-					submit.html('Sending....'); // change submit button text
-				},
-				success: (data) => {
-					this.alert = data;
-					form.trigger('reset'); // reset form
-				},
-				error: (ev) => {
-					console.log(ev);
-				}
-			}); // TODO: fix non working mail php and all components and scripts and styles and delete the unnecessary css to scss
-		});
+		// form.on('submit', (e) => {
+		// 	e.preventDefault(); // prevent default form submit
+		// 	// console.log(this.form);
+		// 	const email = this.email.nativeElement.value;
+		// 	this.button = this.button.nativeElement;
+		// 	this.form = this.form.nativeElement;
+		// 	this.http.post('https://cors-anywhere.herokuapp.com/https://us4.api.mailchimp.com/3.0/lists/344631/members',
+		// 	{ emailAddress: 'hfsk@gmail.com', status: 'unsubscribed' },
+		// 	{
+		// 		headers: {
+		// 			Authorization: 'auth d14931bfc2e48d05e32e259252ba2e61-us4'
+		// 		}
+		// 	})
+		// 		.subscribe(res => {
+		// 			console.log(res);
+		// 		}, err => {
+		// 			console.log(err);
+		// 		});
+		// });
 	}
 
 }
