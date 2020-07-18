@@ -26,7 +26,7 @@
 	border-radius: 5px;
 	i {
 		font-size: 24px;
-		background: linear-gradient(to right, #766dff 0%, #86e7ff 70%);
+		background: linear-gradient(90deg, #766dff 0%, #86e7ff 70%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -84,8 +84,8 @@ h4 {
 	border-radius: 5px;
 	vertical-align: middle;
 	align-self: center;
-	-moz-background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-	-webkit-background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-	-ms-background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-	background-image: linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+	-moz-background-image: -moz-linear-gradient(90deg, #766dff 0%, #88f3ff 100%);
+	-webkit-background-image: -webkit-linear-gradient(90deg, #766dff 0%, #88f3ff 100%);
+	-ms-background-image: -ms-linear-gradient(90deg, #766dff 0%, #88f3ff 100%);
+	background-image: linear-gradient(90deg, #766dff 0%, #88f3ff 100%);
 }

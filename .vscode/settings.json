@@ -19,11 +19,11 @@
     "src\\test.ts": true,
     "src\\favicon.png": true,
     "src\\favicon.ico": true,
-    "src\\environments": true,
     "src\\polyfills.ts": true,
     "src\\main.ts": true,
     "dist\\portfolio": true,
     "src\\app\\components\\home": true,
-    "dist": true
+    "dist": true,
+    "src\\environments": true
   }
 }

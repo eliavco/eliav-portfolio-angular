@@ -3,65 +3,22 @@
 		<div class="tabs_inner">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
 				<li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-						aria-controls="home" aria-selected="true">My Unofficial Eductaion</a></li>
+						aria-controls="home" aria-selected="true">Unofficial Eductaion</a></li>
 				<li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-						aria-controls="profile" aria-selected="false">My Official Education</a></li>
+						aria-controls="profile" aria-selected="false">Official Education</a></li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 					<ul class="list">
-						<li><span></span>
+						<li *ngFor="let unedu of unEducations">
+							<span></span>
 							<div class="media">
-								<div class="d-flex">
-									<p>2016 to present                   </p>
+								<div class="d-flex media-title">
+									<p>{{ unedu.time }}</p>
 								</div>
 								<div class="media-body">
-									<h4>Udemy.com</h4>
-									<p>Python and Django <br></p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>March 2018 to present       </p>
-								</div>
-								<div class="media-body">
-									<h4>Online Courses</h4>
-									<p>Node.js: <br>Express, MongoDB, React Native, Electron</p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>September 2019 to present</p>
-								</div>
-								<div class="media-body">
-									<h4>Coursera</h4>
-									<p>Economics</p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>September 2019 to present</p>
-								</div>
-								<div class="media-body">
-									<h4>BrainBee</h4>
-									<p>Preparing for an international competition in neuroscience</p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>April 2020 to present</p>
-								</div>
-								<div class="media-body">
-									<h4>Angular</h4>
-									<p>Mastering the arts of the front-end framework</p>
+									<h4>{{ unedu.title }}</h4>
+									<p [innerHTML]="unedu.description"></p>
 								</div>
 							</div>
 						</li>
@@ -69,36 +26,15 @@
 				</div>
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 					<ul class="list">
-						<li><span></span>
+						<li *ngFor="let ofedu of ofEducations">
+							<span></span>
 							<div class="media">
-								<div class="d-flex">
-									<p>Sept. 2009 to present     </p>
+								<div class="d-flex media-title">
+									<p>{{ ofedu.time }}</p>
 								</div>
 								<div class="media-body">
-									<h4>Haifa</h4>
-									<p>studying computer physics and science in school</p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>Sept. 2014 to Aug. 2017</p>
-								</div>
-								<div class="media-body">
-									<h4>Bar Ilan University</h4>
-									<p>participating in an advanced math course</p>
-								</div>
-							</div>
-						</li>
-						<li><span></span>
-							<div class="media">
-								<div class="d-flex">
-									<p>March 2017 to present   </p>
-								</div>
-								<div class="media-body">
-									<h4>Diller Fellows International</h4>
-									<p>Leadership program for Jewish teenagers from around the world</p>
+									<h4>{{ ofedu.title }}</h4>
+									<p [innerHTML]="ofedu.description"></p>
 								</div>
 							</div>
 						</li>

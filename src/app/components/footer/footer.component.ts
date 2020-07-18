@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from './../../../environments/environment';
 
 @Component({
 	selector: 'ec-footer',
@@ -7,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 	styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-	alert;
+	privacy = `${environment.portfolioSiteRoot}eliavco/privacy-policy/`;
+	// alert;
 	// @ViewChild('formNews') form;
 	// @ViewChild('buttonNews') button;
 	// @ViewChild('emailNews') email;
@@ -27,7 +29,7 @@ export class FooterComponent implements OnInit {
 		// 	{ emailAddress: 'hfsk@gmail.com', status: 'unsubscribed' },
 		// 	{
 		// 		headers: {
-		// 			Authorization: 'auth d14931bfc2e48d05e32e259252ba2e61-us4'
+		// 			Authorization: 'auth '
 		// 		}
 		// 	})
 		// 		.subscribe(res => {
